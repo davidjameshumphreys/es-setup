@@ -1,0 +1,6 @@
+{:migrators    {:migrations "joplin-resources/migrators/es"}
+ :seeds        {:seed "seeds.es/run"}
+ :databases    {:es {:type :es :host "localhost" :port 9200}}
+ :environments {:dev [{:db       :es
+                       :migrator :migrations
+                       :seed     :seed}]}}
